@@ -1,0 +1,6 @@
+---
+ - hosts: webservers
+   become: true
+   tasks:
+   - name: create directory
+     file: path=/home/ansible/saruma state=directorymode=755 owner=ansible group=ansible
